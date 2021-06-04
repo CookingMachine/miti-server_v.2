@@ -1,0 +1,21 @@
+server:
+  port: 8080
+
+spring:
+  jpa:
+    database: POSTGRESQL
+    show-sql: true
+    generate-ddl: true
+    hibernate:
+      ddl-auto: create-drop
+    properties:
+      hibernate:
+        jdbc:
+          lob:
+            non_contextual_creation: true
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/database
+    username: username
+    password: password
+    platform: postgres
